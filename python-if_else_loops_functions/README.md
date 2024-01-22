@@ -6,3 +6,4 @@ Script 4 : prints all numbers from 0 to 98 in decimal and in hexadecimal
 Script 5 : prints numbers from 0 to 99  
 Script 6 : prints all possible different combinations of two digits with the two digits differents  
 Function 7 : checks for lowercase character  
+Function 8 : converts a string in uppercase  
