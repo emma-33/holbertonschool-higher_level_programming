@@ -5,3 +5,4 @@ Script 3 : prints the ASCII alphabet, in lowercase, not followed by a new line e
 Script 4 : prints all numbers from 0 to 98 in decimal and in hexadecimal  
 Script 5 : prints numbers from 0 to 99  
 Script 6 : prints all possible different combinations of two digits with the two digits differents  
+Function 7 : checks for lowercase character  
