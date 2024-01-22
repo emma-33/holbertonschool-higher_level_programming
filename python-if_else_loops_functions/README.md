@@ -7,3 +7,4 @@ Script 5 : prints numbers from 0 to 99
 Script 6 : prints all possible different combinations of two digits with the two digits differents  
 Function 7 : checks for lowercase character  
 Function 8 : converts a string in uppercase  
+Function 9 : prints the last digit of a number  
