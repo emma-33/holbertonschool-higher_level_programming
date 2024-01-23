@@ -12,3 +12,4 @@ Function 10 : adds two integers and returns the result
 Function 11 : computes a to the power of b and return the value  
 Function 12 : prints the numbers from 1 to 100 separated by a space, prints Fizz if multiple of three, Buzz if multiple of 5 and FizzBuzz if both  
 Function 13 : prints the alphabet in reverse, alterning lowercase and uppercase characters  
+Function 14 : creates a copy of the string, removing the character at the position n  
