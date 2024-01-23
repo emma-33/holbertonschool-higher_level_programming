@@ -9,3 +9,4 @@ Function 7 : checks for lowercase character
 Function 8 : converts a string in uppercase  
 Function 9 : prints the last digit of a number  
 Function 10 : adds two integers and returns the result  
+Function 11 : computes a to the power of b and return the value  
