@@ -6,4 +6,5 @@ Program 4 : prints all the names defined by the compiled module hidden_4.pyc
 Program 5 : imports the variable a from the file variable_load_5.py and prints its value  
 Program 6 : imports all functions from the file calculator_1.py and handles basic operations  
 Program 7 : prints #pythoniscool, followed by a new line, in the standard output  
+Program 8 : function def magic_calculation(a, b): that does exactly the same as the given Python bytecode  
 Program 9 : prints the alphabet in uppercase, followed by a new line  
