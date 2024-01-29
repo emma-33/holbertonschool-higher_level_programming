@@ -6,3 +6,4 @@ Function 4 : replaces an element in a list at a specific position without modify
 Function 5 : removes all characters c and C from a string  
 Function 6 : prints a matrix of integers  
 Function 7 : adds 2 tuples  
+Function 8 : returns a tuple with the length of a string and its first character  
