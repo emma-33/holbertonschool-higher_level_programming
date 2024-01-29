@@ -9,3 +9,4 @@ Function 7 : adds 2 tuples
 Function 8 : returns a tuple with the length of a string and its first character  
 Function 9 : finds the biggest integer of a list  
 Function 10 : finds all multiples of 2 in a list  
+Function 11 : deletes the item at a specific position in a list  
