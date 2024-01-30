@@ -9,3 +9,4 @@ Function 7 : replaces or adds key/value in a dictionary
 Function 8 : deletes a key in a dictionary  
 Function 9 : returns a new dictionary with all values multiplied by 2  
 Function 10 : returns a key with the biggest integer value  
+Function 12 : returns a list with all values multiplied by a number without using any loops  
