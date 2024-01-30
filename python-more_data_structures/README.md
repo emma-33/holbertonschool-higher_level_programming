@@ -6,3 +6,4 @@ Function 4 : returns a set of all elements present in only one set
 Function 5 : returns the number of keys in a dictionary  
 Function 6 : prints a dictionary by ordered keys  
 Function 7 : replaces or adds key/value in a dictionary  
+Function 8 : deletes a key in a dictionary  
