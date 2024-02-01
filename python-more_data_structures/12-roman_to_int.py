@@ -2,38 +2,27 @@
 def roman_to_int(roman_string):
     if not roman_string:
         return 0
+
     result = 0
 
-    for i in roman_string:
+    roman_letters = {
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000,
+        }
 
-        if roman_string[i] == "I":
-            if roman_string[i + 1] == "V":
-                result += 4
-            if roman_string[i + 1] == 'X':
-                result += 9
-            result += 1
+    for i in range(len(roman_string)):
+        current_letter = roman_letters[roman_string[i]]
+        previous_letter = roman_letters[roman_string[i-1]]
 
-        elif roman_string[i] == 'V':
-            result += 5
+        if i > 0 and current_letter > previous_letter:
+            result += current_letter - 2 * previous_letter
 
-        elif roman_string[i] == 'X':
-            if roman_string[i + 1] == 'L':
-                result += 40
-            if roman_string[i + 1] == 'C':
-                result += 90
-            result += 10
-
-        elif roman_string[i] == 'C':
-            if roman_string[i + 1] == 'D':
-                result += 400
-            if roman_string[i + 1] == 'M':
-                result += 900
-            result += 100
-
-        elif roman_string[i] == 'D':
-            result += 500
-
-        elif roman_string[i] == 'M':
-            result += 1000
+        else:
+            result += current_letter
 
     return result
