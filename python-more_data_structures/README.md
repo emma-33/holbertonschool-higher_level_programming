@@ -12,3 +12,4 @@ Function 10 : returns a key with the biggest integer value
 Function 12 : returns a list with all values multiplied by a number without using any loops  
 Function 13 : returns the weighted average of all integers tuple (<score>, <weight>)  
 Function 14 : computes the square value of all integers of a matrix using map  
+Function 15 : deletes keys with a specific value in a dictionary  
