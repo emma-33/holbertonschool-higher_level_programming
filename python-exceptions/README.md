@@ -6,3 +6,4 @@ Function 4 : divides element by element 2 lists
 Function 5 : raises a TypeError  
 Function 6 : raises a NameError with a message  
 Function 7 : prints an integer with an error message  
+Function 8 : executes a function safely  
