@@ -1,5 +1,5 @@
 ------------------------
-Tests for matrix_divided.py
+Tests for matrix_divided
 ------------------------
 
 Importing module

@@ -1,6 +1,6 @@
-------------------------
-Tests for say_my_name.py
-------------------------
+---------------------
+Tests for say_my_name
+---------------------
 
 Importing module
 >>> say_my_name = __import__('3-say_my_name').say_my_name

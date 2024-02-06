@@ -1,6 +1,6 @@
-------------------------
-Tests for add_integer.py
-------------------------
+---------------------
+Tests for add_integer
+---------------------
 
 Importing module
 >>> add_integer = __import__('0-add_integer').add_integer
