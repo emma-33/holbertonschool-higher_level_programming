@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 class Square:
     """Defines a square."""
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """Initializing size.
         Args :
             size: size of square.
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -39,9 +39,14 @@ class Square:
 
     def my_print(self):
         """Prints the square with #."""
-        for i in range(0, self.__size):
-            for j in range(self.__size):
-                print("#", end="")
-            print("")
         if self.__size == 0:
-            print ("")
+            print("")
+        else:
+            for i in range(0, self.__position[1]):
+                print("")
+            for i in range(0, self.__size):
+                for j in range(0, self.__position[0]):
+                    print(" ", end="")
+                for k in range(0, self.__size):
+                    print("#", end="")
+                print("")
