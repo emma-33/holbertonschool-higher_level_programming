@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+"""Creates a class Square."""
+
+
 class Square:
     """Defines a square."""
     def __init__(self, size=0):
@@ -28,7 +32,7 @@ class Square:
     def my_print(self):
         """Prints the square with #."""
         if self.__size == 0:
-            print ("")
+            print("")
         else:
             for i in range(0, self.__size):
                 for j in range(self.__size):
