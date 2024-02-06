@@ -2,11 +2,11 @@
 Tests for add_integer.py
 ------------------------
 
-Numbers
--------
-
 Importing module
 >>> add_integer = __import__('0-add_integer').add_integer
+
+Numbers
+-------
 
 Adding 2 integers
 >>> add_integer(1, 2)
