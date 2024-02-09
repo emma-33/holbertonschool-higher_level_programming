@@ -25,7 +25,7 @@ Subtracting 1 integer and 1 float
 98
 
 Adding 2 floats
->>> add_integer(2, float(inf))
+>>> add_integer(2, float('inf'))
 Traceback (most recent call last):
 OverflowError: cannot convert float infinity to integer
 
