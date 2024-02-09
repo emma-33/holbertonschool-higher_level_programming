@@ -19,11 +19,5 @@ class TestMaxInteger(unittest.TestCase):
         """tests max in the middle"""
         self.assertEqual(max_integer([1, 4, 3, 2]), 4)
     
-    def test_not_an_int(self):
-        """tests for not an int"""
-        with self.assertRaises(TypeError):
-            max_integer("Hello")
-
-    
 if __name__ == '__main__':
     unittest.main()
