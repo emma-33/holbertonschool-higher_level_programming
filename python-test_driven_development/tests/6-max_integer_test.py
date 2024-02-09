@@ -21,7 +21,7 @@ class TestMaxInteger(unittest.TestCase):
     
     def test_neg_num_in_list(self):
         """tests 1 negative number in list"""
-        self.assertEqual(max_integer([1, 4, -3, 2]), 3)
+        self.assertEqual(max_integer([1, 4, -3, 2]), 4)
     
     def test_only_neg_num(self):
         """tests only neative numbers in list"""
