@@ -22,7 +22,7 @@ Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Dividing by float inf
->>> matrix_divided([[1, 2, 3], [4, 5, 6]], float(inf))
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], float('inf'))
 0.0
 
 Missing one argument
