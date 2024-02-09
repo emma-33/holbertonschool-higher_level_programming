@@ -45,6 +45,6 @@ def matrix_divided(matrix, div):
                 raise TypeError(message)
             if div == float('inf'):
                 return 0.0
-    
+
     return list(map(lambda x: list(map(lambda y:
-            round(y / div, 2), x)), matrix))
+                round(y / div, 2), x)), matrix))
