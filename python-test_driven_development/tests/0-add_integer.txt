@@ -53,6 +53,6 @@ Traceback (most recent call last):
 TypeError: b must be an integer
 
 Adding NaN
->>> add_integer(NaN)
+>>> add_integer('NaN')
 Traceback (most recent call last):
 ValueError: cannot convert float NaN to integer
