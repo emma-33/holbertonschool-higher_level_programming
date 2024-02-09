@@ -29,3 +29,7 @@ first_name and last_name are strings
 >>> say_my_name("Walter", "White")
 My name is Walter White
 
+No string
+>>> say_my_name(None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
