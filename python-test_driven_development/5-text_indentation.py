@@ -19,7 +19,7 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    
+
     previous = ""
     for i in text:
         if i is " " and i is text[0] and previous is "":
