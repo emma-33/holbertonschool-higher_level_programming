@@ -58,5 +58,8 @@ class Rectangle:
             return rectangle
 
         for height in range(self.__height):
-            rectangle += ("#" * self.__width) + "\n"
+            for width in range(self.__width):
+                rectangle += "#"
+            rectangle += "\n"
+        rectangle = rectangle[:-1]
         return rectangle
