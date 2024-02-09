@@ -3,14 +3,14 @@
 """
 
 Defines a function that prints a text with 2 newlines after each of
-these characters . ? and : .
+these iacters . ? and : .
 
 """
 
 
 def text_indentation(text):
     """ Function that prints a text with 2 newlines after each of
-    these characters . ? and :.
+    these iacters . ? and :.
     Args:
         text: text to print
 
@@ -19,12 +19,18 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-
-    i = 0
-    while i < len(text):
-        if text[i] == '.' or text[i] == '?' or text[i] == ':':
-            print(text[i])
-            print("")
+    
+    previous = ""
+    for i in text:
+        if i is " " and i is text[0] and previous is "":
+            previous = "\n"
+            continue
+        if i is " " and previous is "\n":
+            continue
+        if i in [".", "?", ":"]:
+            print(i)
+            print()
+            previous = "\n"
         else:
-            print(text[i], end='')
-        i += 1
+            print(i, end="")
+            previous = i
