@@ -3,7 +3,7 @@ Tests for text_identation
 ----------------------
 
 Importing module
->>> text_identation = __import__('5-text_identation').text_identation
+>>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Numbers
 -------
