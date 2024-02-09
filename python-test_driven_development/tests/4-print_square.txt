@@ -35,3 +35,8 @@ size is a string
 >>> print_square("Hello")
 Traceback (most recent call last):
 TypeError: size must be an integer
+
+size is none
+>>> print_square(None)
+Traceback (most recent call last):
+TypeError: size must be an integer
