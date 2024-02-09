@@ -22,10 +22,10 @@ size is -1
 Traceback (most recent call last):
 ValueError: size must be >= 0
 
-size is -7.5
->>> print_square(-7.5)
+size is 7.5
+>>> print_square(7.5)
 Traceback (most recent call last):
-ValueError: size must be >= 0
+TypeError: size must be an integer
 
 
 Non Numbers
