@@ -8,12 +8,12 @@ Importing module
 Numbers
 -------
 size is a number
->>> text_identation(4)
+>>> text_indentation(4)
 Traceback (most recent call last):
 TypeError: text must be a string
 
 size is None
->>> text_identation(None)
+>>> text_indentation(None)
 Traceback (most recent call last):
 TypeError: text must be a string
 
@@ -22,43 +22,38 @@ Non Numbers
 -----------
 
 size is a string with ?
->>> text_identation("Hello?")
+>>> text_indentation("Hello?")
 Hello?
 <BLANKLINE>
 
 size is a string with .
->>> text_identation("Hello.")
+>>> text_indentation("Hello.")
 Hello.
 <BLANKLINE>
 
 size is a string with :
->>> text_identation("Hello:")
+>>> text_indentation("Hello:")
 Hello:
 <BLANKLINE>
 
 size is a string with blankspaces and !
->>> text_identation(" Hello!")
-Hello
-<BLANKLINE>
+>>> text_indentation(" Hello!")
+Hello!
 
 size is a string with only blankspaces
->>> text_identation("    ")
+>>> text_indentation("    ")
 
-
-size is a string with blanspaces
->>> text_identation(" Hello ")
-Hello
 
 size is a string with multilines and ? . and :
->>> text_identation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
-Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
-Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
-Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. \
-Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum \
-rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo \
-stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum \
-cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
-beatiorem! Iam ruinas videres""")
+>>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
+... Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
+... Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. \
+... Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum \
+... rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo \
+... stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum \
+... cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
+... beatiorem! Iam ruinas videres""")
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 <BLANKLINE>
 Quonam modo?
