@@ -24,6 +24,11 @@ Subtracting 1 integer and 1 float
 >>> add_integer(100.3, -2)
 98
 
+Adding 2 floats
+>>> add_integer(2, float(inf))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
 Non Numbers
 -----------
 
@@ -46,3 +51,8 @@ Adding 1 integer and nothing
 >>> add_integer(3, None)
 Traceback (most recent call last):
 TypeError: b must be an integer
+
+Adding NaN
+>>> add_integer(NaN)
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
