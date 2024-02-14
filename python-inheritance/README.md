@@ -7,3 +7,4 @@ Function 5 : Defines an empty class BaseGeometry
 Function 6 : Defines a public instance method : def area(self): that raises an Exception with the message "area() is not implemented"  
 Function 7 : Add a method to validate integers  
 Function 8 : Defines a class Rectangle inherited from BaseGeometry  
+Function 9 : Prints the area of the rectangle  
