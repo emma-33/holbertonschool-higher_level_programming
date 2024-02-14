@@ -8,3 +8,4 @@ Function 6 : Defines a public instance method : def area(self): that raises an E
 Function 7 : Add a method to validate integers  
 Function 8 : Defines a class Rectangle inherited from BaseGeometry  
 Function 9 : Prints the area of the rectangle  
+Function 10 : Defines a class Square inherited from Rectangle  
