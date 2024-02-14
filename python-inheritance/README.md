@@ -6,3 +6,4 @@ Function 4 : Returns True if the object is an instance of a class that inherited
 Function 5 : Defines an empty class BaseGeometry  
 Function 6 : Defines a public instance method : def area(self): that raises an Exception with the message "area() is not implemented"  
 Function 7 : Add a method to validate integers  
+Function 8 : Defines a class Rectangle inherited from BaseGeometry  
