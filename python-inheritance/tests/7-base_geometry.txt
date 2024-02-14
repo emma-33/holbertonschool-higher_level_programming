@@ -5,17 +5,36 @@ Tests for base_geometry
 Importing module
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Value isn't an int
+Valid output
+------------
+
+Value is positive
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", 5)
+
+Invalid outputs
+---------------
+
+Value is a string
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+[TypeError] name must be an integer
+
+Value is a list
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", [1,2,3])
+Traceback (most recent call last):
 [TypeError] name must be an integer
 
 Value is equal to 0
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
 [ValueError] age must be greater than 0
 
 Value is less than 0
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
 [ValueError] distance must be greater than 0
