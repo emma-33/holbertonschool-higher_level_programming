@@ -4,3 +4,4 @@ Function 2 : Returns True if the object is exactly an instance of the specified 
 Function 3 : Returns True if the object is an instance of, or if the object is an instance of a class that inherited from, the specified class ; otherwise False  
 Function 4 : Returns True if the object is an instance of a class that inherited (directly or indirectly) from the specified class ; otherwise False  
 Function 5 : Defines an empty class BaseGeometry  
+Function 6 : Defines a public instance method : def area(self): that raises an Exception with the message "area() is not implemented"  
