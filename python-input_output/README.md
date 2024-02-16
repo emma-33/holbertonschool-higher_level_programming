@@ -10,3 +10,4 @@ Function 8 : returns the dictionary description of an object
 Function 9 : defines a student class  
 Function 10 : defines a student class  
 Function 11 : defines a student class  
+Function 12 : returns a list of lists of integers representing the Pascal’s triangle of n  
