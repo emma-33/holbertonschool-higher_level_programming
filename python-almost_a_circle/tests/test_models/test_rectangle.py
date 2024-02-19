@@ -106,6 +106,40 @@ class Test_Rectangle_Area(unittest.TestCase):
         r2 = Rectangle(8, 7, 0, 0, 12)
         self.assertEqual(r2.area, 56)
 
+class Test_Rectangle_Update_Args(unittest.TestCase):
+    """test for update method"""
+
+    def test_update_arg_0(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r.update()
+        self.assertEqual("[Rectangle] (1) 10/10 - 10/10", str(r))
+
+    def test_update_one_arg(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r.update(89)
+        self.assertEqual("[Rectangle] (89) 10/10 - 10/10", str(r))
+
+    def test_update_2_args(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r.update(89, 2)
+        self.assertEqual("[Rectangle] (89) 10/10 - 2/10", str(r))
+
+    def test_update_3_args(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r.update(89, 2, 3)
+        self.assertEqual("[Rectangle] (89) 10/10 - 2/3", str(r))
+
+    def test_update_4_args(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r.update(89, 2, 3, 4)
+        self.assertEqual("[Rectangle] (89) 4/10 - 2/3", str(r))
+
+    def test_update_5_args(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r.update(89, 2, 3, 4, 5)
+        self.assertEqual("[Rectangle] (89) 4/5 - 2/3", str(r))
+
+
 
 if __name__ == '__main__':
     unittest.main()
