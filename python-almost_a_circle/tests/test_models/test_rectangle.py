@@ -139,6 +139,33 @@ class Test_Rectangle_Update_Args(unittest.TestCase):
         r.update(89, 2, 3, 4, 5)
         self.assertEqual("[Rectangle] (89) 4/5 - 2/3", str(r))
 
+class Test_Rectangle_Update_Kwargs(unittest.TestCase):
+    """test for update method with kwargs"""
+
+    def test_update_arg_0(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r.update()
+        self.assertEqual("[Rectangle] (1) 10/10 - 10/10", str(r))
+
+    def test_update_height(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r.update(height=1)
+        self.assertEqual("[Rectangle] (1) 10/10 - 10/1", str(r))
+
+    def test_update_width_x(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r.update(width=1, x=2)
+        self.assertEqual("[Rectangle] (1) 2/10 - 1/1", str(r))
+
+    def test_update_y_width_x_id(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r.update(y=1, width=2, x=3, id=89)
+        self.assertEqual("[Rectangle] (89) 3/1 - 2/1", str(r))
+
+    def test_update_x_height_y_width(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r.update(x=1, height=2, y=3, width=4)
+        self.assertEqual("[Rectangle] (89) 1/3 - 4/2", str(r))
 
 
 if __name__ == '__main__':
