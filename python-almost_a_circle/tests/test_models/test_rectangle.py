@@ -7,8 +7,8 @@ from models.base import Base
 from models.rectangle import Rectangle
 
 
-class Test_Rectangle_instantiation(unittest.TestCase):
-    """test for instantiation of recatngle class"""
+class Test_Rectangle_Instantiation(unittest.TestCase):
+    """test for instantiation of rectangle class"""
 
     def test_new_rectangle(self):
         new = Rectangle(1, 3, 5, 4, 7)
@@ -17,6 +17,94 @@ class Test_Rectangle_instantiation(unittest.TestCase):
         self.assertEqual(new.x, 5)
         self.assertEqual(new.y, 4)
         self.assertEqual(new.id, 7)
+
+
+class Test_Width(unittest.TestCase):
+    """test for width instance"""
+
+    def test_valid(self):
+        """Valid value"""
+        rectangle = Rectangle(5, 7)
+        self.assertEqual(rectangle.width, 5)
+
+    def test_string_width(self):
+        """Trying to pass a string as width"""
+        with self.assertRaises(TypeError):
+            rectangle = Rectangle("5", 7)
+
+    def test_negative_width(self):
+        """Trying to pass a negative value as width"""
+        with self.assertRaises(ValueError):
+            rectangle = Rectangle(-10, 7)
+
+
+class Test_Height(unittest.TestCase):
+    """test for height instance"""
+
+    def test_valid(self):
+        "Valid value"
+        rectangle = Rectangle(5, 7)
+        self.assertEqual(rectangle.height, 7)
+
+    def test_string_height(self):
+        """Trying to pass a string as height"""
+        with self.assertRaises(TypeError):
+            rectangle = Rectangle(5, "7")
+
+    def test_negative_height(self):
+        """Trying to pass a negative value as height"""
+        with self.assertRaises(ValueError):
+            rectangle = Rectangle(10, -7)
+
+
+class Test_x(unittest.TestCase):
+    """Test for x instance"""
+
+    def test_valid(self):
+        """Valid value"""
+        rectangle = Rectangle(5, 7, 2)
+        self.assertEqual(rectangle.x, 2)
+
+    def test_string_x(self):
+        """Trying to pass a string as x"""
+        with self.assertRaises(TypeError):
+            rectangle = Rectangle(5, 7, "2")
+
+    def test_negative_x(self):
+        """Trying to pass a negative value as x"""
+        with self.assertRaises(ValueError):
+            rectangle = Rectangle(10, 7, -2)
+
+
+class Test_y(unittest.TestCase):
+    """Test for y instance"""
+
+    def test_valid(self):
+        """Valid value"""
+        rectangle = Rectangle(5, 7, 2, 4)
+        self.assertEqual(rectangle.y, 4)
+
+    def test_string_y(self):
+        """Trying to pass a string as y"""
+        with self.assertRaises(TypeError):
+            rectangle = Rectangle(5, 7, 2, "4")
+
+    def test_negative_y(self):
+        """Trying to pass a negative value as y"""
+        with self.assertRaises(ValueError):
+            rectangle = Rectangle(10, 7, 2, -4)
+
+
+class Test_Rectangle_Area(unittest.TestCase):
+    """test for area method"""
+
+    def test_width_and_height(self):
+        r1 = Rectangle(3, 2)
+        self.assertEqual(r1.area, 6)
+
+    def test_all_instances(self):
+        r2 = Rectangle(8, 7, 0, 0, 12)
+        self.assertEqual(r2.area, 56)
 
 
 if __name__ == '__main__':
