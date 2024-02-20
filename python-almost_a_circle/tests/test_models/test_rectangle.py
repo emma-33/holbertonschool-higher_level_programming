@@ -167,6 +167,18 @@ class Test_Rectangle_Update_Kwargs(unittest.TestCase):
         r.update(x=1, height=2, y=3, width=4)
         self.assertEqual("[Rectangle] (89) 1/3 - 4/2", str(r))
 
+class Test_Rectangle_Dictionary(unittest.TestCase):
+    """test for update method with kwargs"""
+
+    def test_dict(self):
+        dict = Rectangle(10, 2, 1, 9)
+        dict.to_dictionary()
+        self.assertEqual("{'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}", str(dict))
+
+    def test_dict_type(self):
+        dictionary = Rectangle(10, 2, 1, 9)
+        dictionary.to_dictionary()
+        self.assertIsInstance(dictionary.to_dictionary, dict)
 
 if __name__ == '__main__':
     unittest.main()
