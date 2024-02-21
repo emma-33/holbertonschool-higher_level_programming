@@ -40,3 +40,10 @@ class Base():
 
         with open(filename, "w") as file:
             file.write(list_dict)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the JSON representation json_string"""
+        if json_string is None or json_string == "[]":
+            return "[]"
+        return json.loads(json_string)
