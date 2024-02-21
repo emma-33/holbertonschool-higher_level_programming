@@ -11,12 +11,12 @@ class Test_square_Instantiation(unittest.TestCase):
     """test for instantiation of Square class"""
 
     def test_new_square(self):
-        new = Square(1, 3, 5, 4, 7)
-        self.assertEqual(new.width, 1)
-        self.assertEqual(new.height, 3)
-        self.assertEqual(new.x, 5)
-        self.assertEqual(new.y, 4)
-        self.assertEqual(new.id, 7)
+        """Test a new square"""
+        new = Square(1, 3, 5, 4)
+        self.assertEqual(new.size, 1)
+        self.assertEqual(new.x, 3)
+        self.assertEqual(new.y, 5)
+        self.assertEqual(new.id, 4)
 
 
 class Test_Size(unittest.TestCase):
@@ -44,18 +44,18 @@ class Test_x(unittest.TestCase):
 
     def test_valid(self):
         """Valid value"""
-        Square = Square(5, 7, 2)
+        square = Square(5, 7, 2)
         self.assertEqual(Square.x, 2)
 
     def test_string_x(self):
         """Trying to pass a string as x"""
         with self.assertRaises(TypeError):
-            Square = Square(5, 7, "2")
+            square = Square(5, 7, "2")
 
     def test_negative_x(self):
         """Trying to pass a negative value as x"""
         with self.assertRaises(ValueError):
-            Square = Square(10, 7, -2)
+            square = Square(10, 7, -2)
 
 
 class Test_y(unittest.TestCase):
@@ -63,30 +63,30 @@ class Test_y(unittest.TestCase):
 
     def test_valid(self):
         """Valid value"""
-        Square = Square(5, 7, 2, 4)
+        square = Square(5, 7, 2, 4)
         self.assertEqual(Square.y, 4)
 
     def test_string_y(self):
         """Trying to pass a string as y"""
         with self.assertRaises(TypeError):
-            Square = Square(5, 7, 2, "4")
+            square = Square(5, 7, 2, "4")
 
     def test_negative_y(self):
         """Trying to pass a negative value as y"""
         with self.assertRaises(ValueError):
-            Square = Square(10, 7, 2, -4)
+            square = Square(10, 7, 2, -4)
 
 
 class Test_square_Area(unittest.TestCase):
     """test for area method"""
 
     def test_width_and_height(self):
-        r1 = Square(3, 2)
-        self.assertEqual(r1.area, 6)
+        s1 = Square(3, 2)
+        self.assertEqual(s1.area, 6)
 
     def test_all_instances(self):
-        r2 = Square(8, 7, 0, 0, 12)
-        self.assertEqual(r2.area, 56)
+        s2 = Square(8, 7, 0, 0)
+        self.assertEqual(s2.area, 56)
 
 class Test_Square_Update_Args_Kwargs(unittest.TestCase):
     """test for update method"""
