@@ -36,10 +36,16 @@ class Square(Rectangle):
         return str_id + str_x_y + str_size
 
     def update(self, *args, **kwargs):
-        if args and len(args) is not 0:
+        if args and len(args) != 0:
             list_attributes = ['id', 'size', 'x', 'y']
             for arg in range(len(args)):
                 setattr(self, list_attributes[arg], args[arg])
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of Rectangle"""
+        dictionary = {"id": self.id, "size": self.size, "x": self.x,
+                      "y": self.y}
+        return dictionary
