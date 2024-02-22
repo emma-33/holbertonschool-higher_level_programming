@@ -32,6 +32,7 @@ class Square(Rectangle):
         return str_id + str_x_y + str_size
 
     def update(self, *args, **kwargs):
+        """update method"""
         if args and len(args) != 0:
             list_attributes = ['id', 'size', 'x', 'y']
             for arg in range(len(args)):
