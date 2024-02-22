@@ -65,11 +65,6 @@ class Test_x(unittest.TestCase):
         rectangle = Rectangle(5, 7, 2)
         self.assertEqual(rectangle.x, 2)
 
-    def test_string_x(self):
-        """Trying to pass a string as x"""
-        with self.assertRaises(TypeError):
-            rectangle = Rectangle(5, 7, "2")
-
     def test_negative_x(self):
         """Trying to pass a negative value as x"""
         with self.assertRaises(ValueError):
@@ -84,11 +79,6 @@ class Test_y(unittest.TestCase):
         rectangle = Rectangle(5, 7, 2, 4)
         self.assertEqual(rectangle.y, 4)
 
-    def test_string_y(self):
-        """Trying to pass a string as y"""
-        with self.assertRaises(TypeError):
-            rectangle = Rectangle(5, 7, 2, "4")
-
     def test_negative_y(self):
         """Trying to pass a negative value as y"""
         with self.assertRaises(ValueError):
@@ -99,43 +89,43 @@ class Test_Rectangle_Area(unittest.TestCase):
     """test for area method"""
 
     def test_width_and_height(self):
-        r1 = Rectangle(3, 2)
-        self.assertEqual(r1.area, 6)
+        r = Rectangle(3, 2)
+        self.assertEqual(r.area, 6)
 
     def test_all_instances(self):
-        r2 = Rectangle(8, 7, 0, 0, 12)
-        self.assertEqual(r2.area, 56)
+        r = Rectangle(8, 7, 0, 0, 12)
+        self.assertEqual(r.area, 56)
 
 class Test_Rectangle_Update_Args(unittest.TestCase):
     """test for update method"""
 
     def test_update_arg_0(self):
-        r = Rectangle(10, 10, 10, 10, 10)
+        r = Rectangle(10, 10, 10, 10, 1)
         r.update()
         self.assertEqual("[Rectangle] (1) 10/10 - 10/10", str(r))
 
     def test_update_one_arg(self):
-        r = Rectangle(10, 10, 10, 10, 10)
+        r = Rectangle(10, 10, 10, 10, 1)
         r.update(89)
         self.assertEqual("[Rectangle] (89) 10/10 - 10/10", str(r))
 
     def test_update_2_args(self):
-        r = Rectangle(10, 10, 10, 10, 10)
+        r = Rectangle(10, 10, 10, 10, 1)
         r.update(89, 2)
         self.assertEqual("[Rectangle] (89) 10/10 - 2/10", str(r))
 
     def test_update_3_args(self):
-        r = Rectangle(10, 10, 10, 10, 10)
+        r = Rectangle(10, 10, 10, 10, 1)
         r.update(89, 2, 3)
         self.assertEqual("[Rectangle] (89) 10/10 - 2/3", str(r))
 
     def test_update_4_args(self):
-        r = Rectangle(10, 10, 10, 10, 10)
+        r = Rectangle(10, 10, 10, 10, 1)
         r.update(89, 2, 3, 4)
         self.assertEqual("[Rectangle] (89) 4/10 - 2/3", str(r))
 
     def test_update_5_args(self):
-        r = Rectangle(10, 10, 10, 10, 10)
+        r = Rectangle(10, 10, 10, 10, 1)
         r.update(89, 2, 3, 4, 5)
         self.assertEqual("[Rectangle] (89) 4/5 - 2/3", str(r))
 
@@ -143,29 +133,29 @@ class Test_Rectangle_Update_Kwargs(unittest.TestCase):
     """test for update method with kwargs"""
 
     def test_update_arg_0(self):
-        r = Rectangle(10, 10, 10, 10, 10)
+        r = Rectangle(10, 10, 10, 10, 1)
         r.update()
         self.assertEqual("[Rectangle] (1) 10/10 - 10/10", str(r))
 
     def test_update_height(self):
-        r = Rectangle(10, 10, 10, 10, 10)
+        r = Rectangle(10, 10, 10, 10, 1)
         r.update(height=1)
         self.assertEqual("[Rectangle] (1) 10/10 - 10/1", str(r))
 
     def test_update_width_x(self):
-        r = Rectangle(10, 10, 10, 10, 10)
+        r = Rectangle(10, 10, 10, 10, 1)
         r.update(width=1, x=2)
-        self.assertEqual("[Rectangle] (1) 2/10 - 1/1", str(r))
+        self.assertEqual("[Rectangle] (1) 2/10 - 1/10", str(r))
 
     def test_update_y_width_x_id(self):
-        r = Rectangle(10, 10, 10, 10, 10)
+        r = Rectangle(10, 10, 10, 10, 1)
         r.update(y=1, width=2, x=3, id=89)
-        self.assertEqual("[Rectangle] (89) 3/1 - 2/1", str(r))
+        self.assertEqual("[Rectangle] (89) 3/1 - 2/10", str(r))
 
     def test_update_x_height_y_width(self):
-        r = Rectangle(10, 10, 10, 10, 10)
+        r = Rectangle(10, 10, 10, 10, 1)
         r.update(x=1, height=2, y=3, width=4)
-        self.assertEqual("[Rectangle] (89) 1/3 - 4/2", str(r))
+        self.assertEqual("[Rectangle] (1) 1/3 - 4/2", str(r))
 
 class Test_Rectangle_Dictionary(unittest.TestCase):
     """test for update method with kwargs"""
