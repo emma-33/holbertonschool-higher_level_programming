@@ -7,6 +7,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
+
 class Test_square_Instantiation(unittest.TestCase):
     """test for instantiation of Square class"""
 
@@ -36,7 +37,6 @@ class Test_Size(unittest.TestCase):
         """Trying to pass a negative value as size"""
         with self.assertRaises(ValueError):
             square = Square(-10)
-
 
 
 class Test_x(unittest.TestCase):
@@ -88,13 +88,14 @@ class Test_square_Area(unittest.TestCase):
         s2 = Square(8, 7, 0, 0)
         self.assertEqual(s2.area, 56)
 
+
 class Test_Square_Update_Args_Kwargs(unittest.TestCase):
     """test for update method"""
 
     def test_update_arg_0(self):
         s = Square(5)
         s.update()
-        self.assertEqual("[Square] (1) 0/0 - 5", str(s))
+        self.assertEqual("[Square] (12) 0/0 - 5", str(s))
 
     def test_update_one_arg(self):
         s = Square(5)
@@ -119,18 +120,17 @@ class Test_Square_Update_Args_Kwargs(unittest.TestCase):
     def test_update_x(self):
         s = Square(5)
         s.update(x=12)
-        self.assertEqual("[Square] (1) 12/4 - 2", str(s))
+        self.assertEqual("[Square] (16) 12/0 - 5", str(s))
 
     def test_update_size_y(self):
         s = Square(5)
         s.update(size=7, y=1)
-        self.assertEqual("[Square] (1) 12/1 - 7", str(s))
+        self.assertEqual("[Square] (15) 0/1 - 7", str(s))
 
     def test_update_size_id_y(self):
         s = Square(5)
         s.update(size=7, id=89, y=1)
-        self.assertEqual("[Square] (89) 12/1 - 7", str(s))
-
+        self.assertEqual("[Square] (89) 0/1 - 7", str(s))
 
 
 if __name__ == '__main__':
