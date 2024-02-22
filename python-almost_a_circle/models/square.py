@@ -25,9 +25,9 @@ class Square(Rectangle):
 
     def __str__(self):
         """returns the str() reprensentation of square"""
-        str_id = "[Square] ({}) ".format(self.id)
-        str_x_y = "{}/{} - ".format(self.x, self.y)
-        str_size = "{}".format(self.width)
+        str_id = "[Square] ({}) ".format(str(self.id))
+        str_x_y = "{}/{} - ".format(str(self.x), str(self.y))
+        str_size = "{}".format(str(self.width))
 
         return str_id + str_x_y + str_size
 
