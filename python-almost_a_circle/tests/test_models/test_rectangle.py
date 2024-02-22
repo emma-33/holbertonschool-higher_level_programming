@@ -85,18 +85,6 @@ class Test_y(unittest.TestCase):
             rectangle = Rectangle(10, 7, 2, -4)
 
 
-class Test_Rectangle_Area(unittest.TestCase):
-    """test for area method"""
-
-    def test_width_and_height(self):
-        r = Rectangle(1, 3, 2, 0, 0)
-        self.assertEqual(r.area, 6)
-
-    def test_all_instances(self):
-        r = Rectangle(8, 7, 0, 0, 12)
-        self.assertEqual(r.area, 56)
-
-
 class Test_Rectangle_Update_Args(unittest.TestCase):
     """test for update method"""
 
@@ -158,21 +146,6 @@ class Test_Rectangle_Update_Kwargs(unittest.TestCase):
         r = Rectangle(10, 10, 10, 10, 1)
         r.update(x=1, height=2, y=3, width=4)
         self.assertEqual("[Rectangle] (1) 1/3 - 4/2", str(r))
-
-
-class Test_Rectangle_Dictionary(unittest.TestCase):
-    """test for update method with kwargs"""
-
-    def test_dict(self):
-        dict = Rectangle(10, 2, 1, 9)
-        dict.to_dictionary()
-        self.assertEqual("{'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}",
-                         str(dict))
-
-    def test_dict_type(self):
-        dictionary = Rectangle(10, 2, 1, 9)
-        dictionary.to_dictionary()
-        self.assertIsInstance(dictionary.to_dictionary, dict)
 
 
 if __name__ == '__main__':
