@@ -25,8 +25,23 @@ class Square(Rectangle):
         elif value < 0:
             raise ValueError("width must be > 0")
         else:
-            self.__width = value
-            self.__height = value
+            self.width = value
+            self.height = value
+
+    @property
+    def x(self):
+        """size getter"""
+        return self.x
+
+    @x.setter
+    def x(self, value):
+        """x setter"""
+        if type(value) is not int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+        self.x = value
+
 
     def __str__(self):
         """returns the str() reprensentation of square"""
