@@ -40,7 +40,7 @@ class Test_Square_Update_Args_Kwargs(unittest.TestCase):
     def test_update_arg_0(self):
         s = Square(5)
         s.update()
-        self.assertEqual("[Square] (14) 0/0 - 5", str(s))
+        self.assertEqual("[Square] (25) 0/0 - 5", str(s))
 
     def test_update_one_arg(self):
         s = Square(5)
@@ -65,12 +65,12 @@ class Test_Square_Update_Args_Kwargs(unittest.TestCase):
     def test_update_x(self):
         s = Square(5)
         s.update(x=12)
-        self.assertEqual("[Square] (18) 12/0 - 5", str(s))
+        self.assertEqual("[Square] (29) 12/0 - 5", str(s))
 
     def test_update_size_y(self):
         s = Square(5)
         s.update(size=7, y=1)
-        self.assertEqual("[Square] (17) 0/1 - 7", str(s))
+        self.assertEqual("[Square] (28) 0/1 - 7", str(s))
 
     def test_update_size_id_y(self):
         s = Square(5)
@@ -83,7 +83,7 @@ class Test_Square_to_dictionnary(unittest.TestCase):
     def test_to_dictionary(self):
         s1 = Square(10, 2, 1)
         s1_dictionary = s1.to_dictionary()
-        self.assertEqual({'id': 20, 'size': 10, 'x': 2, 'y':1}, s1_dictionary)
+        self.assertEqual({'id': 31, 'size': 10, 'x': 2, 'y':1}, s1_dictionary)
 
 
 class Test_Square_str(unittest.TestCase):
@@ -92,7 +92,7 @@ class Test_Square_str(unittest.TestCase):
     def test_str(self):
         s1 = Square(3, 1, 3)
         s1_str= s1.__str__()
-        self.assertEqual("[Square] (19) 1/3 - 3", str(s1_str))
+        self.assertEqual("[Square] (30) 1/3 - 3", str(s1_str))
  
 if __name__ == '__main__':
     unittest.main()
