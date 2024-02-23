@@ -113,6 +113,20 @@ class Test_create(unittest.TestCase):
 class Test_save_to_file(unittest.TestCase):
     """tests for save to file method"""
 
+    def delete_any_files(self):
+        try:
+            os.remove("Rectangle.json")
+        except IOError:
+            pass
+        try:
+            os.remove("Square.json")
+        except IOError:
+            pass
+        try:
+            os.remove("Base.json")
+        except IOError:
+            pass
+
     def test_save_to_file_rectangle(self):
         r1 = Rectangle(10, 7, 2, 8)
         r2 = Rectangle(2, 4)
