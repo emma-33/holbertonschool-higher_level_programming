@@ -49,5 +49,15 @@ class Test_to_json_string(unittest.TestCase):
         self.assertEqual("[]", json_dictionary)
 
 
+class Test_create(unittest.TestCase):
+    """tests for create method"""
+    
+    def test_create_rectangle(self):
+        r1 = Rectangle(3, 5, 1)
+        r1_dictionary = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_dictionary)
+        self.assertEqual("[Rectangle] (2) 1/0 - 3/5", str(r2))
+
+
 if __name__ == '__main__':
     unittest.main()

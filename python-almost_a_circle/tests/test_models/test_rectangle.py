@@ -162,7 +162,7 @@ class Test_Rectangle_to_dictionnary(unittest.TestCase):
     def test_to_dictionary(self):
         r1 = Rectangle(10, 2, 1, 9)
         r1_dictionary = r1.to_dictionary()
-        self.assertEqual({'id': 3, 'width': 10, 'height': 2, 'x': 1, 'y':9}, r1_dictionary)
+        self.assertEqual({'id': 6, 'width': 10, 'height': 2, 'x': 1, 'y':9}, r1_dictionary)
 
 
 class Test_Rectangle_str(unittest.TestCase):
@@ -172,6 +172,16 @@ class Test_Rectangle_str(unittest.TestCase):
         r1 = Rectangle(4, 6, 2, 1, 12)
         r1_str= r1.__str__()
         self.assertEqual("[Rectangle] (12) 2/1 - 4/6", str(r1_str))
-   
+
+
+class Test_Rectangle_display(unittest.TestCase):
+    """tests for display method"""
+    
+    def test_display(self):
+        r1 = Rectangle(2, 2)
+        r1_display= r1.display()
+        self.assertTrue("##\n##\n", r1_display)
+
+
 if __name__ == '__main__':
     unittest.main()
