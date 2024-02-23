@@ -115,6 +115,7 @@ class Test_create(unittest.TestCase):
         s2 = Square.create(**s1_dictionary)
         self.assertEqual("[Square] (5) 5/1 - 3", str(s2))
 
+
 class Test_save_to_file(unittest.TestCase):
     """tests for save to file method"""
 
