@@ -77,22 +77,24 @@ class Test_Square_Update_Args_Kwargs(unittest.TestCase):
         s.update(size=7, id=89, y=1)
         self.assertEqual("[Square] (89) 0/1 - 7", str(s))
 
+
 class Test_Square_to_dictionnary(unittest.TestCase):
     """tests for to_dictionary method"""
-    
+
     def test_to_dictionary(self):
         s1 = Square(10, 2, 1)
         s1_dictionary = s1.to_dictionary()
-        self.assertEqual({'id': 31, 'size': 10, 'x': 2, 'y':1}, s1_dictionary)
+        self.assertEqual({'id': 31, 'size': 10, 'x': 2, 'y': 1}, s1_dictionary)
 
 
 class Test_Square_str(unittest.TestCase):
     """tests for str method"""
-    
+
     def test_str(self):
         s1 = Square(3, 1, 3)
-        s1_str= s1.__str__()
+        s1_str = s1.__str__()
         self.assertEqual("[Square] (30) 1/3 - 3", str(s1_str))
- 
+
+
 if __name__ == '__main__':
     unittest.main()
