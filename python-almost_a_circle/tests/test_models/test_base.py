@@ -17,9 +17,17 @@ class Test_Base(unittest.TestCase):
         new_id = Base()
         self.assertEqual(new_id.id, 1)
 
+    def test_none_id(self):
+        new_id = Base(None)
+        self.assertEqual(new_id.id, 2)
+
     def test_new_id(self):
         new_id = Base(3)
         self.assertEqual(new_id.id, 3)
+
+    def test_two_args(self):
+        with self.assertRaises(TypeError):
+            Base(1, 2)
 
 
 class Test_from_json_string(unittest.TestCase):
@@ -49,6 +57,48 @@ class Test_to_json_string(unittest.TestCase):
         json_dictionary = Base.to_json_string(None)
         self.assertEqual("[]", json_dictionary)
 
+    def test_to_json_no_args(self):
+        with self.assertRaises(TypeError):
+            Base.to_json_string()
+
+    def test_to_json_one_args(self):
+        with self.assertRaises(TypeError):
+            Base.to_json_string([], 1)
+
+    def test_to_json_type_rectangle(self):
+        r = Rectangle(10, 7, 2, 8)
+        string = Base.to_json_string([r.to_dictionary()])
+        self.assertEqual(str, type(string))
+
+    def test_to_json_string_rectangle_one_dict(self):
+        r = Rectangle(10, 7, 2, 8, 6)
+        string = Base.to_json_string([r.to_dictionary()])
+        self.assertTrue(len(string) == 53)
+
+    def test_to_json_string_rectangle_two_dict(self):
+        r1 = Rectangle(10, 7, 2, 8, 6)
+        r2 = Rectangle(3, 4, 10, 7, 1)
+        list_dict = [r1.to_dictionary(), r2.to_dictionary()]
+        string = Base.to_json_string(list_dict)
+        self.assertTrue(len(string) == 106)
+
+    def test_to_json_type_square(self):
+        s = Square(10, 2, 8)
+        string = Base.to_json_string([s.to_dictionary()])
+        self.assertEqual(str, type(string))
+
+    def test_to_json_string_square_one_dict(self):
+        s = Square(10, 2, 8, 6)
+        string = Base.to_json_string([s.to_dictionary()])
+        self.assertTrue(len(string) == 39)
+
+    def test_to_json_string_square_two_dict(self):
+        s1 = Square(10, 7, 2, 8)
+        s2 = Square(3, 4, 10, 7)
+        list_dict = [s1.to_dictionary(), s2.to_dictionary()]
+        string = Base.to_json_string(list_dict)
+        self.assertTrue(len(string) == 78)
+
 
 class Test_create(unittest.TestCase):
     """tests for create method"""
@@ -57,7 +107,7 @@ class Test_create(unittest.TestCase):
         r1 = Rectangle(3, 5, 1)
         r1_dictionary = r1.to_dictionary()
         r2 = Rectangle.create(**r1_dictionary)
-        self.assertEqual("[Rectangle] (2) 1/0 - 3/5", str(r2))
+        self.assertEqual("[Rectangle] (3) 1/0 - 3/5", str(r2))
 
 
 class Test_save_to_file(unittest.TestCase):
