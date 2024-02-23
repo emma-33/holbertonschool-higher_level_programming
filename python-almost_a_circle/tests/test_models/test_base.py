@@ -109,6 +109,11 @@ class Test_create(unittest.TestCase):
         r2 = Rectangle.create(**r1_dictionary)
         self.assertEqual("[Rectangle] (3) 1/0 - 3/5", str(r2))
 
+    def test_create_square(self):
+        s1 = Square(3, 5, 1)
+        s1_dictionary = s1.to_dictionary()
+        s2 = Square.create(**s1_dictionary)
+        self.assertEqual("[Square] (5) 5/1 - 3", str(s2))
 
 class Test_save_to_file(unittest.TestCase):
     """tests for save to file method"""
