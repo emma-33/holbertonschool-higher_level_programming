@@ -1,2 +1,2 @@
 -- Lists all the tables of a datbase
-SHOW `tables`
+SHOW `tables`;
