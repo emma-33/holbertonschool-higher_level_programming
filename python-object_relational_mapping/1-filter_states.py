@@ -12,8 +12,8 @@ def main():
                          passwd=sys.argv[2], db=sys.argv[3])
 
     cur = db.cursor()
-    cur.execute("""SELECT id, name FROM `states`
-                WHERE left(name,1)='N' ORDER BY id;""")
+    cur.execute("""SELECT * FROM `states`
+                WHERE name LIKE 'N%' ORDER BY id;""")
 
     states = cur.fetchall()
     for state in states:
