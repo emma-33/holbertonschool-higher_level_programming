@@ -14,7 +14,7 @@ def main():
 
         cur = db.cursor()
         cur.execute("""SELECT id, name FROM `states`
-                    WHERE name = '{}' ORDER BY id;""".format(sys.argv[4]))
+                    WHERE name LIKE BINARY '{}' ORDER BY id;""".format(sys.argv[4]))
 
         states = cur.fetchall()
         for state in states:
