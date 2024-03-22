@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Adds a new State object"""
-from os import name
+"""Update the State object with the name passed as argument
+"""
 import sys
 from model_state import Base, State
 
@@ -14,12 +14,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    new_state = State(name="Louisiana")
+    updated_state = session.query(State).filter(State.id == 2).first()
 
-    session.add(new_state)
-    session.commit()
-
-    if new_state is not None:
-        print("{}".format(new_state.id))
+    if updated_state is not None:
+        updated_state.name = 'New Mexico'
+        session.commit()
 
     session.close()
