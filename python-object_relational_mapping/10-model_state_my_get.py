@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Lists all states objects with a inside state name
+"""Prints the State object with the name passed as argument
 """
 import sys
 from model_state import Base, State
@@ -14,7 +14,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for state in session.query(State).filter(State.name.like('%a%')).all():
-        print("{}: {}".format(state.id, state.name))
+    state = session.query(State).filter(State.name == sys.argv[4]).first()
+
+    if state is not None:
+        print("{}".format(state.id))
+    else:
+        print("Not found")
 
     session.close()
