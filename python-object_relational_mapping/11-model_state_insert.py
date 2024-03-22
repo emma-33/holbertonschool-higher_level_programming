@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Prints the State object with the name passed as argument
 """
+from os import name
 import sys
 from model_state import Base, State
 
@@ -13,13 +14,13 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    
-    state = session.query(State).filter(State.name == sys.argv[4]).first()
 
-    if state is not None:
-        print("{}: {}".format(state.id, state.name))
-    else:
-        print("Nothing")
+    new_state = State(name="Louisiana")
 
+    session.add(new_state)
+    session.commit()
+
+    if new_state is not None:
+        print("{}".format(new_state.id))
 
     session.close()
